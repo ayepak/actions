@@ -1,1 +1,3 @@
-module/*    @ayepak
+# No notification for sub directories like submodule
+# module/*    @ayepak
+module/**/*   @ayepak
