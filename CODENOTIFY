@@ -1,3 +1,5 @@
 # No notification for sub directories like submodule
 # module/*    @ayepak
+
+# Notifies for files in module and submodule
 module/**/*   @ayepak
