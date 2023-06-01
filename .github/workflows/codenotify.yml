@@ -1,0 +1,18 @@
+name: codenotify
+on:
+  pull_request_target:
+    types: [opened, synchronize, ready_for_review]
+jobs:
+  codenotify:
+    runs-on: ubuntu-latest
+    name: codenotify
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - uses: sourcegraph/codenotify@v0.6.4
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
