@@ -4,4 +4,5 @@
 # Notifies for files in module and submodule
 # module/**/*   @ayepak
 
+# Notifies for files in module and submodule
 module/**   @ayepak
